@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter App</title>
+</head>
+<body>
+    <h1>Counter App</h1>
+    <p>You have visited this site {{ visit_counter }} times.</p>
+    <p>The current counter value is {{ counter }}.</p>
+    <form action="{{ url_for('increment') }}" method="post">
+        <button type="submit">+2</button>
+        <input type="hidden" name="increment" value="2">
+    </form>
+    <form action="{{ url_for('destroy_session') }}" method="post">
+        <button type="submit">Reset</button>
+    </form>
+    <form action="{{ url_for('set_visit_counter') }}" method="post">
+        <label for="visit_counter">Set visit counter:</label>
+        <input type="number" id="visit_counter" name="visit_counter" min="0" value="{{ visit_counter }}" required>
+        <button type="submit">Set</button>
+    </form>
+</body>
+</html>
