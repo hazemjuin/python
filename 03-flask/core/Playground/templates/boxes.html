@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAYGROUND</title>
+</head>
+<body>
+    
+</body>
+</html>
+<html>
+<head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    {% for _ in range(num_boxes) %}
+        <div class="box" style="background-color: {{color}}"></div>
+    {% endfor %}
+</body>
+</html>
