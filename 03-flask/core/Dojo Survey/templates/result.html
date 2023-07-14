@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Submission Result</h1>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Gender:</strong> {{ gender }}</p>
+        <p><strong>Interests:</strong></p>
+        <ul>
+            {% for interest in interests %}
+                <li>{{ interest }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
