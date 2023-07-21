@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dojos Page</title>
+</head>
+<body>
+    <h1>Dojos</h1>
+    <ul>
+        {% for dojo in dojos %}
+        <li><a href="{{ url_for('dojo_show', dojo_id=dojo.id) }}">{{ dojo.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <h2>Add a new Dojo</h2>
+    <form method="POST" action="{{ url_for('dojos') }}">
+        <input type="text" name="dojo_name" placeholder="Dojo Name">
+        <input type="submit" value="Add Dojo">
+    </form>
+</body>
+</html>

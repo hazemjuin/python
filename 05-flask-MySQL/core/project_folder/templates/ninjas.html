@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Ninja</title>
+</head>
+<body>
+    <h1>Add Ninja</h1>
+    <form method="POST" action="{{ url_for('ninjas') }}">
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="last_name" placeholder="Last Name">
+        <input type="number" name="age" placeholder="Age">
+        <select name="dojo_id">
+            {% for dojo in dojos %}
+            <option value="{{ dojo.id }}">{{ dojo.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Add Ninja">
+    </form>
+</body>
+</html>

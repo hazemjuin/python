@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ dojo.name }} Dojo</title>
+</head>
+<body>
+    <h1>{{ dojo.name }} Dojo</h1>
+    <h2>Ninjas</h2>
+    <ul>
+        {% for ninja in dojo.ninjas %}
+        <li>{{ ninja.first_name }} {{ ninja.last_name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
